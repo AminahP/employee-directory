@@ -1,13 +1,23 @@
-import Header from "./Header";
-import Search from "./SearchBar";
-import EmployeeList from "./EmployeeList";
+import EmployeeList from "./EmployeeList"
+import Header from "./Header"
+import SearchBar from "./SearchBar"
+import EmployeePage from "./EmployeePage"
 
-export default function Home() {
+const Homepage = (props) => {
   return (
-    <>
-      <Header title="Employee Directory" />
-      <Search />
-      <EmployeeList />
-    </>
-  );
+  <>
+    <div id="homeContainer">
+      <div class="section" id="leftSide">
+        <Header />
+        <SearchBar />
+        <EmployeeList />
+      </div>
+      <div class="section" id="rightSide">
+        <EmployeePage />
+      </div>
+    </div>
+  </>
+  )
 }
+
+export default Homepage
